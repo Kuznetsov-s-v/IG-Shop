@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/{nickname}/{project_name}">
+  <a href="https://github.com/Kuznetsov-s-v/IG-Shop">
     <img src="https://ucarecdn.com/b8fcebe2-6277-4666-a88f-06f07e1cce26/" alt="Logo">
   </a>
 
@@ -11,11 +11,11 @@
     An awesome mobile application for the company "81 IG".
     <br />
     <br />
-    <a href="https://github.com/{nickname}/{project_name">View Demo</a>
+    <a href="https://github.com/Kuznetsov-s-v/IG-Shop">View Demo</a>
     ·
-    <a href="https://github.com/{nickname}/{project_name}/issues">Report Bug</a>
+    <a href="https://github.com/Kuznetsov-s-v/IG-Shop/issues">Report Bug</a>
     ·
-    <a href="https://github.com/{nickname}/{project_name/issues">Request Feature</a>
+    <a href="https://github.com/Kuznetsov-s-v/IG-Shop/issues">Request Feature</a>
   </p>
 </div>
 
@@ -56,7 +56,7 @@ Modern mobile applications use modern libraries, and therefore we use the best l
 2. Select the menu item "File" -> "New" -> "Project from Version Control"
 3. Clone the repo
    ```sh
-   git clone https://github.com/{nickname}/{project_name}.git
+   git clone https://github.com/Kuznetsov-s-v/IG-Shop.git
    ```
 
 </br>
@@ -76,7 +76,7 @@ Modern mobile applications use modern libraries, and therefore we use the best l
 - [ ] Add more screens
 - [ ] Multi-language Support
 
-See the [open issues](https://github.com/{nickname}/{project_name}/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Kuznetsov-s-v/IG-Shop/issues) for a full list of proposed features (and known issues).
 
 </br>
 
