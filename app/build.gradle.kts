@@ -41,6 +41,12 @@ android {
 
 dependencies {
 
+    implementation ("io.coil-kt:coil:2.4.0")
+    implementation ("androidx.navigation:navigation-compose:2.8.3")
+    implementation ("androidx.navigation:navigation-runtime-ktx:2.8.3")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
+    implementation ("com.microsoft.design:fluent-system-icons:1.1.245@aar")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -49,6 +55,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.room.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
