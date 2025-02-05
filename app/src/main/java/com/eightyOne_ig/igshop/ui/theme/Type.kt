@@ -42,7 +42,7 @@ val Typography = Typography(
     */
 )
 
-val CustomTypography = Typography(
+val customTypography = Typography(
     bodyLarge = TextStyle(
         fontFamily = fonts,
         fontWeight = FontWeight.Bold,
@@ -57,4 +57,11 @@ val CustomTypography = Typography(
         lineHeight = 28.sp,
         letterSpacing = 0.sp
     ),
+    labelSmall = TextStyle(
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.Medium,
+        fontSize = 12.sp,
+        lineHeight = 14.06.sp,
+        letterSpacing = 0.5.sp
+    )
 )

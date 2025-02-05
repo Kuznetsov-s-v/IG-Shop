@@ -7,10 +7,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.BlendMode
 //import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
@@ -19,9 +21,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.eightyOne_ig.igshop.ui.theme.CustomTypography
 import com.eightyOne_ig.igshop.ui.theme.backgroundColor
-import com.eightyOne_ig.igshop.ui.theme.onSurfaceColor
+import com.eightyOne_ig.igshop.ui.theme.customTypography
 import com.eightyOne_ig.igshop.ui.theme.white
 import com.eightyOne_ig.igshop.ui.theme.yellow
 import com.microsoft.fluent.mobile.icons.R
@@ -42,7 +43,9 @@ fun JetCircularRatingBar(
     )
     Box(
         modifier = Modifier
-            .size(60.dp)
+            //.size(81.dp, 74.dp)
+            .size(80.dp)
+            //.size(60.dp)
             ,//.background(color = backgroundColor),
         contentAlignment = Alignment.Center,
 
@@ -52,12 +55,13 @@ fun JetCircularRatingBar(
                 .fillMaxSize()
         ) {
             drawCircle(
-                color = white.copy(alpha = 0.2f).copy(alpha = 0.25f),
+                color = Color(0xFF8F9BA2), //white.copy(alpha = 0.2f).copy(alpha = 0.25f),
                 radius = 47f,
                 center = center
             )
             drawCircle(
-                color = backgroundColor,
+                color = Color(0xFF566973), //white.copy(0.1f),
+                //color = backgroundColor.copy(10f),
                 radius = 36f,
                 center = center,
                 //blendMode = BlendMode.DstOut
@@ -66,9 +70,9 @@ fun JetCircularRatingBar(
         Box(contentAlignment = Alignment.Center) {
             Text(
                 text = rating.toString(),
-                color = onSurfaceColor,
+                color = MaterialTheme.colorScheme.surface,
                 fontSize = 14.sp,
-                style = CustomTypography.bodyLarge,
+                style = customTypography.bodyLarge,
                 fontWeight = FontWeight.Medium,
                 //textAlign = TextAlign.Center
             )
@@ -89,14 +93,15 @@ fun JetCircularRatingBar(
                         Icon(
                             painter = starField,
                             contentDescription = "Star",
-                            tint = Color(0xFF556772),
+                            tint = Color(0xFF8F9BA2),
                         )
                             Icon(
                                 painter = starField12,
                                 contentDescription = "Star",
                                 modifier = Modifier
                                     .offset(x = (-0.16).dp),
-                                    tint = backgroundColor,
+                                    //tint = backgroundColor,
+                                tint = Color(0xFF566973), //white.copy(0.1f),
                             )
                     }
                 }
@@ -106,7 +111,7 @@ fun JetCircularRatingBar(
 }
 
 
-@Preview(showBackground = false, locale = "en"/* , device = "spec:width=411dp,height=891dp" */)
+@Preview(showBackground = false /*, locale = "en" , device = "spec:width=411dp,height=891dp" */)
 @Composable
 fun JetCircularRatingBarPreview(){
     JetCircularRatingBar(
