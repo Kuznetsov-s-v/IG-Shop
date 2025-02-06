@@ -14,6 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
@@ -29,12 +30,12 @@ import com.microsoft.fluent.mobile.icons.R
 fun SpecialOfferCard(
     number: String,
     selected: Boolean,
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
 ){
     Box(
-      modifier = Modifier
+      modifier = modifier
           .clip(shape = RoundedCornerShape(24.dp))
-          .background(color = Color.White.copy(0.5f))
+          //.background(color = Color.White.compositeOver(Color.White.copy(0.05f)))
           .dashedBorder(2.dp,color = MaterialTheme.colorScheme.onSecondary,shape = RoundedCornerShape(24.dp),on = 7.dp,off = if (selected) 0.dp else 7.dp )
         ,
         contentAlignment = Alignment.CenterStart
@@ -54,13 +55,13 @@ fun SpecialOfferCard(
             color = Color.Companion.White.copy(0.75f),
             textAlign = TextAlign.Center,
             modifier = Modifier
-                .padding(start = 183.dp)
+                .padding(start = 171.dp)
                 .align(Alignment.CenterEnd)
                 .graphicsLayer(rotationZ = -90f)
             ,
             style = TextStyle(
                 fontFamily = fonts,
-                fontWeight = FontWeight.Bold,
+                fontWeight = FontWeight.W700,
                 fontSize = 12.sp,
                 lineHeight = 14.06.sp,
             )

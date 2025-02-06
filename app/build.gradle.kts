@@ -40,8 +40,8 @@ android {
 }
 
 dependencies {
-
-    implementation ("io.coil-kt:coil:2.4.0")
+    implementation ("io.coil-kt.coil3:coil-compose:3.0.4")
+//    implementation ("io.coil-kt:coil:2.4.0")
     implementation ("androidx.navigation:navigation-compose:2.8.3")
     implementation ("androidx.navigation:navigation-runtime-ktx:2.8.3")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")

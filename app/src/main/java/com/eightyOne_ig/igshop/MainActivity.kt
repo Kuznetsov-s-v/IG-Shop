@@ -6,6 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
@@ -16,6 +18,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.eightyOne_ig.igshop.ui.screens.home.views.SpecialOfferCard
+import com.eightyOne_ig.igshop.ui.screens.home.views.SpecialOffersWidget
+import com.eightyOne_ig.igshop.ui.screens.home.views.SportcarCard
+import com.eightyOne_ig.igshop.ui.screens.home.views.UserRatingCard
 import com.eightyOne_ig.igshop.ui.theme.IGShopTheme
 import com.eightyOne_ig.igshop.ui.theme.components.JetSearchField
 
@@ -25,8 +30,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             IGShopTheme(darkTheme = false, dynamicColor = false) {
-                    Box(modifier = Modifier
-                        .padding(start = 50.dp, end = 50.dp, top = 100.dp)
+                    Column (modifier = Modifier
+                        .padding(start = 0.dp, end = 0.dp, top = 100.dp)
                         .fillMaxSize()
                         .background(color = MaterialTheme.colorScheme.background)
                     ) {
@@ -40,6 +45,23 @@ class MainActivity : ComponentActivity() {
                             selected = true,
                             modifier = Modifier,
                         )
+                        Spacer(modifier = Modifier.padding(bottom = 20.dp))
+
+                       /* UserRatingCard(
+                            number = 1,
+                            imagePath = "file:///android_asset/UserIcon.png",
+                            name = "Джонни Джонсон",
+                            balls = 123,
+                            modifier = Modifier
+                        )*/
+                        /*SportcarCard(
+                            carName = "Lamba-A",
+                            carType = "Классический спорткар",
+                            rating = 4,
+                            price = 177_000,
+                            modifier = Modifier
+                        )*/
+                        SpecialOffersWidget()
                     }
             }
         }
