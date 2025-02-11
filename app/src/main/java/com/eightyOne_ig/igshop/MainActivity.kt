@@ -17,6 +17,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.eightyOne_ig.igshop.ui.screens.home.views.AchievementsWidget
+import com.eightyOne_ig.igshop.ui.screens.home.views.HomeViewDisplay
 import com.eightyOne_ig.igshop.ui.screens.home.views.SpecialOfferCard
 import com.eightyOne_ig.igshop.ui.screens.home.views.SpecialOffersWidget
 import com.eightyOne_ig.igshop.ui.screens.home.views.SportcarCard
@@ -30,22 +32,17 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             IGShopTheme(darkTheme = false, dynamicColor = false) {
-                    Column (modifier = Modifier
-                        .padding(start = 0.dp, end = 0.dp, top = 100.dp)
-                        .fillMaxSize()
-                        .background(color = MaterialTheme.colorScheme.background)
-                    ) {
+                        /*SpecialOfferCard(
+                            number = "№ 103 436",
+                            selected = true,
+                            modifier = Modifier,
+                        )*/
                         /*JetSearchField(
                             hint = "text_1",
                             value = "text_2",
                             modifier = Modifier
                         )*/
-                        SpecialOfferCard(
-                            number = "№ 103 436",
-                            selected = true,
-                            modifier = Modifier,
-                        )
-                        Spacer(modifier = Modifier.padding(bottom = 20.dp))
+                      //  Spacer(modifier = Modifier.padding(bottom = 20.dp))
 
                        /* UserRatingCard(
                             number = 1,
@@ -61,8 +58,10 @@ class MainActivity : ComponentActivity() {
                             price = 177_000,
                             modifier = Modifier
                         )*/
-                        SpecialOffersWidget()
-                    }
+                        //SpecialOffersWidget2()
+                        //AchievementsWidget()
+                        HomeViewDisplay()
+
             }
         }
     }

@@ -35,8 +35,7 @@ fun JetSearchField(
     modifier: Modifier,
 ){
     Row(
-        modifier = Modifier
-            .fillMaxWidth()
+        modifier = modifier
             .clip(RoundedCornerShape(8.dp))
             .background(color = MaterialTheme.colorScheme.onSurface)
             .advancedShadow(
@@ -57,7 +56,7 @@ fun JetSearchField(
             tint = Color.Companion.White
         )
         Text(
-            text = stringResource(R.string.search_hint),
+            text = hint,
             color = MaterialTheme.colorScheme.surface,
             textAlign = TextAlign.Center,
             modifier = Modifier.padding(start = 17.29.dp),

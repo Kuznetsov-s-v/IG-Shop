@@ -37,7 +37,7 @@ fun UserRatingCard(
     imagePath: String,
     name: String,
     balls: Int,
-    modifier: Modifier
+    modifier: Modifier = Modifier
 ) {
     fun  rowTextStyle(FontWeight: FontWeight):TextStyle {
         return TextStyle(
@@ -47,7 +47,7 @@ fun UserRatingCard(
             lineHeight = 14.06.sp,
         )
     }
-    Row(){
+    Row(modifier = modifier){
         Text(
             text = number.toString(),
             color = Color.Companion.White.copy(0.75f),
@@ -79,7 +79,7 @@ fun UserRatingCard(
             text = balls.toString() + " б.",
             color = Color.Companion.White.copy(0.75f),
             textAlign = TextAlign.Center,
-            modifier = Modifier,
+            modifier = Modifier.padding(end = 12.dp),
             style = rowTextStyle(FontWeight.W500)
         )
     }

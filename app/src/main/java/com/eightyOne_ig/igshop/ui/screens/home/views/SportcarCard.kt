@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -31,16 +32,17 @@ fun SportcarCard(
     carType: String,
     rating: Int,
     price: Int,
+    imagePath: String,
     modifier: Modifier
 ) {
     Row(
-        modifier = Modifier
+        modifier = modifier
             .clip(shape = RoundedCornerShape(16.dp))
             .background(MaterialTheme.colorScheme.onSurface)
 
     ) {
         AsyncImage(
-            model = "file:///android_asset/Sportcar1.jpg",
+            model = imagePath, //"file:///android_asset/Sportcar1.jpg",
             contentDescription = "",
             modifier = Modifier
                 .padding(start = 16.dp, top = 16.dp, bottom = 16.dp)
@@ -69,7 +71,7 @@ fun SportcarCard(
                 text = carType,
                 color = Color.Companion.White,
                 textAlign = TextAlign.Center,
-                modifier = Modifier,
+                modifier = Modifier.padding(end = 18.dp),
                 style = TextStyle(
                     fontFamily = fonts,
                     fontWeight = FontWeight.W700,
@@ -79,14 +81,14 @@ fun SportcarCard(
             )
             Spacer(modifier = Modifier.width(7.dp))
             Row(
-                modifier = Modifier
+                modifier = Modifier.fillMaxWidth()
             ) {
                 JetRatingBar(rating, modifier = Modifier)
                 Spacer(modifier = Modifier.weight(1f))
                 Text(
                     text = "%,d".format(price).replace(",", " ") + " Kr",
                     color = Color(0xFFEBEBEB),
-                    textAlign = TextAlign.Center,
+                    textAlign = TextAlign.Right,
                     modifier = Modifier.padding(end = 18.dp),
                     style = TextStyle(
                         fontFamily = fonts,
